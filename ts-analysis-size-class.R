@@ -35,3 +35,10 @@ size classes
      summarize(counts = n())
    return(ts_data)
 }
+
+plot_ts_data <- function(df){
+   #Plot time-series data by size class
+   # Input: data frame with year, size_class, and counts columns
+   ggplot(df, aes(x = year, y = counts, color = size_class)) +
+     geom_line()
+}
